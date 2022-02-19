@@ -106,10 +106,15 @@ public class RadioTest {
         track.prevTrack();
         assertEquals(0, track.getMinTrack());
     }
+
+    @Test
+    void setAmount(){
+        Radio track = new Radio();
+        assertEquals(10,track.getAmount());
+    }
     @Test
     void amount() {
-        Radio radio = new Radio(10);
-        assertEquals(10,radio.getAmount());
+        Radio track = new Radio(8);
+        assertEquals(8,track.getAmount());
     }
 }
-

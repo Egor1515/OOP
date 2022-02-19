@@ -1,40 +1,43 @@
 package ru.netology.Radio;
 
 public class Radio {
-
+    private int amount = 10;
+    private int minTrack = 0;
+    private int currentTrack;
     private int maxVolume = 100;
     private int minVolume = 0;
     private int currentVolume;
-    private int currentTrack;
-    private int amount = 10;
-    private int maxTrack = 9;
-    private int minTrack = 0;
 
+
+    public Radio() {
+    }
+
+    public Radio(int amount) {
+        this.amount = amount;
+    }
 
     public int getMinTrack() {
         return minTrack;
     }
 
     public int getMaxTrack() {
+        int maxTrack = 9;
         return maxTrack;
     }
 
     public int getMinVolume() {
         return minVolume;
     }
-
-    public int getMaxVolume() {
+    public int getMaxVolume(){
         return maxVolume;
     }
 
     public int getCurrentVolume() {
         return currentVolume;
     }
-
     public int getAmount() {
         return amount;
     }
-
 
     public int setCurrentVolume(int currentVolume) {
         if (currentVolume > 0 & currentVolume < 100) {
@@ -57,7 +60,6 @@ public class Radio {
             return this.currentVolume;
         }
         return maxVolume;
-
     }
 
     public int getCurrentTrack() {
@@ -70,6 +72,7 @@ public class Radio {
         } else {
             this.currentTrack = 0;
         }
+
     }
 
     public void nextTrack() {
@@ -88,23 +91,7 @@ public class Radio {
         }
     }
 
-    public Radio(int amount) {
-        this.amount = amount;
-    }
-
-    public Radio() {
-    }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
