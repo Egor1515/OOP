@@ -13,6 +13,12 @@
     </properties>
     <dependencies>
         <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.22</version>
+                <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.8.2</version>
@@ -54,9 +60,9 @@
                             <rule>
                                 <limits>
                                     <limit>
-                                        <counter>BRANCH</counter>
+                                        <counter>LINE</counter>
                                         <value>COVEREDRATIO</value>
-                                        <minimum>50%</minimum>
+                                        <minimum>60%</minimum>
                                     </limit>
                                 </limits>
                             </rule>
@@ -68,8 +74,6 @@
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.5</version>
         </plugin>
-
-
         </plugins>
     </build>
 </project>
