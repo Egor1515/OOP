@@ -7,6 +7,7 @@ public class Radio {
     private int maxVolume = 100;
     private int minVolume = 0;
     private int currentVolume;
+    private int maxTrack = 9;
 
 
     public Radio() {
@@ -21,7 +22,7 @@ public class Radio {
     }
 
     public int getMaxTrack() {
-        int maxTrack = 9;
+        this.maxTrack = amount - 1;
         return maxTrack;
     }
 
