@@ -1,7 +1,7 @@
 package ru.netology.Radio;
 
 public class Radio {
-    private int amount = 10;
+    private int amount = 20;
     private int minTrack = 0;
     private int currentTrack;
     private int maxVolume = 100;
@@ -67,14 +67,17 @@ public class Radio {
         return currentTrack;
     }
 
-    public void setCurrentTrack(int currentTrack) {
-        if (currentTrack >= 0 & currentTrack <= 9) {
+    public int setCurrentTrack(int currentTrack) {
+        if (currentTrack >= 0 & currentTrack <= amount -1) {
             this.currentTrack = currentTrack;
         } else {
             this.currentTrack = 0;
         }
-
+        return this.currentTrack;
     }
+
+
+
 
     public void nextTrack() {
         if (currentTrack > 0) {

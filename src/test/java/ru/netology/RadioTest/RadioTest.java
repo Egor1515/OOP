@@ -113,6 +113,11 @@ public class RadioTest {
         assertEquals(10,track.getAmount());
     }
     @Test
+    void setAmount1(){
+        Radio track = new Radio();
+        assertEquals(15,track.setCurrentTrack(15));
+    }
+    @Test
     void amount() {
         Radio track = new Radio(8);
         assertEquals(8,track.getAmount());
