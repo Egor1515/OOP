@@ -10,19 +10,21 @@ public class RadioTest {
     @Test
     void getCurrentVolume() {
         Radio service = new Radio();
-        int expected = 0;        ;
-        assertEquals(expected,service.getCurrentVolume());
+        int expected = 0;
+        ;
+        assertEquals(expected, service.getCurrentVolume());
     }
 
     @Test
     void setCurrentVolume() {
         Radio service = new Radio();
-        assertEquals(10,service.setCurrentVolume(10));
+        assertEquals(10, service.setCurrentVolume(10));
     }
+
     @Test
     void setCurrentVolume1() {
         Radio service = new Radio();
-        assertEquals(100,service.setCurrentVolume(100));
+        assertEquals(100, service.setCurrentVolume(100));
     }
 
     @Test
@@ -102,24 +104,36 @@ public class RadioTest {
     @Test
     void nextTrack1() {
         Radio track = new Radio();
-        track.setCurrentTrack(9);
-        track.prevTrack();
-        assertEquals(0, track.getMinTrack());
+        assertEquals(0, track.setCurrentTrack(10));
     }
 
     @Test
-    void setAmount(){
+    void setAmount() {
         Radio track = new Radio();
-        assertEquals(10,track.getAmount());
+        assertEquals(10, track.getAmount());
     }
+
     @Test
-    void setAmount1(){
+    void setAmount1() {
         Radio track = new Radio();
-        assertEquals(15,track.setCurrentTrack(15));
+        assertEquals(9, track.setCurrentTrack(9));
     }
+
     @Test
     void amount() {
         Radio track = new Radio(8);
-        assertEquals(8,track.getAmount());
+        assertEquals(8, track.getAmount());
+    }
+
+    @Test
+    void shouldSetAny() {
+        Radio track = new Radio(20);
+
+        int expected = 15;
+        int actual = track.setCurrentTrack(15);
+
+        assertEquals(expected,actual);
+
+
     }
 }

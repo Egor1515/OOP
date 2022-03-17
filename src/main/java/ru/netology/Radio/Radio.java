@@ -1,7 +1,8 @@
 package ru.netology.Radio;
 
 public class Radio {
-    private int amount = 20;
+
+    private int amount = 10 ;
     private int minTrack = 0;
     private int currentTrack;
     private int maxVolume = 100;
@@ -11,6 +12,7 @@ public class Radio {
 
 
     public Radio() {
+
     }
 
     public Radio(int amount) {
